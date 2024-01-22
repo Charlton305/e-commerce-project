@@ -1,7 +1,9 @@
 .category-bar {
   display: flex;
+  background-color: #EFEFEF;
   justify-content: space-around;
-  padding: 1rem 4rem 0;
+  align-items: center;
+  padding: .5rem 4%;
   width: 100%;
 
   a {
