@@ -29,6 +29,17 @@ const ShopContextProvider = props => {
     return totalAmount;
   };
 
+  const getItemsInCart = () => {
+    let count = 0;
+
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        count += cartItems[item];
+      }
+    }
+    return count;
+  };
+
   const addToCart = itemId => {
     setCartItems(prev => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
@@ -46,7 +57,8 @@ const ShopContextProvider = props => {
     addToCart,
     removeFromCart,
     inputCartAmount,
-    getTotalCartAmount
+    getTotalCartAmount,
+    getItemsInCart
   };
 
   return (

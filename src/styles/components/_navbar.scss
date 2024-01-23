@@ -47,8 +47,26 @@
   }
 }
 
+.shopping-cart__container {
+  position: relative;
+}
+
 .shopping-cart {
   @media (max-width: 500px) {
     height: clamp(2.5rem, 6vw, 2.8rem);
   }
+}
+
+.shopping-cart__basket-count {
+  align-items: center;
+  background: #d34136;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 900;
+  justify-content: center;
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+  position: absolute;
+  right: 0;
 }
