@@ -5,7 +5,8 @@ import CartItem from "../components/cart-components/CartItem";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const { cartItems, getTotalCartAmount, clearBasket } =
+    useContext(ShopContext);
   const navigate = useNavigate();
   const totalAmount = getTotalCartAmount();
 
@@ -24,6 +25,14 @@ const Cart = () => {
           <p className="checkout__subtotal">
             Subtotal: £{totalAmount.toFixed(2)}{" "}
           </p>
+          <button
+            onClick={() => {
+              clearBasket();
+            }}
+            className="checkout__clear-basket"
+          >
+            Clear Basket
+          </button>
           <div className="checkout__button-container">
             <button onClick={() => navigate("/")}>Continue Shopping</button>
             <button>Checkout</button>
