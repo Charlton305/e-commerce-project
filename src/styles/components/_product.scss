@@ -1,0 +1,39 @@
+.product {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 1rem;
+  max-height: 46rem;
+  max-width: 90vw;
+  transition: 0.3s ease-in-out;
+}
+
+.product__image {
+  max-height: 30rem;
+  max-width: 90vw;
+}
+
+.product__description {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.product:hover {
+  cursor: pointer;
+}
+
+.product__button {
+  background-color: transparent;
+  border: 2px solid rgb(19, 19, 19);
+  border-radius: 1.5rem;
+  margin-top: 0.5rem;
+  min-width: 10rem;
+  padding: 0.5rem 1rem;
+}
+
+.product__button:hover {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  cursor: pointer;
+}

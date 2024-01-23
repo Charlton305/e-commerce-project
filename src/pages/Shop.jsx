@@ -1,9 +1,9 @@
-import CategoryList from "../components/CategoryList";
+import CategoryList from "../components/shop-components/CategoryList";
 
 const Shop = () => {
   return (
     <div className="shop">
-      <div className="shopTitle">
+      <div className="shop__title">
         <h1>SkateShop</h1>
       </div>
       <CategoryList />

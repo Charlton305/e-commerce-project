@@ -1,7 +1,7 @@
 import allProducts from "../assets/allProducts";
 import { ShopContext } from "../context/shop-context";
 import { useContext } from "react";
-import CartItem from "../components/CartItem";
+import CartItem from "../components/cart-components/CartItem";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
@@ -11,10 +11,8 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <div>
-        <h1>Your Cart Items</h1>
-      </div>
-      <div className="cartItems">
+      <h1>Your Cart Items</h1>
+      <div className="cart-items">
         {allProducts.map(product => {
           if (cartItems[product.id] !== 0) {
             return <CartItem key={product.id} {...product} />;
@@ -23,12 +21,16 @@ const Cart = () => {
       </div>
       {totalAmount > 0 ? (
         <div className="checkout">
-          <p>Subtotal: £{totalAmount.toFixed(2)} </p>
-          <button onClick={() => navigate("/")}>Continue Shopping</button>
-          <button>Checkout</button>
+          <p className="checkout__subtotal">
+            Subtotal: £{totalAmount.toFixed(2)}{" "}
+          </p>
+          <div className="checkout__button-container">
+            <button onClick={() => navigate("/")}>Continue Shopping</button>
+            <button>Checkout</button>
+          </div>
         </div>
       ) : (
-        <h1>Your Cart is Empty</h1>
+        <h1 className="cart__empty">Your Cart is Empty</h1>
       )}
     </div>
   );

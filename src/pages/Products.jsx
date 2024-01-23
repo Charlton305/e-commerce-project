@@ -1,17 +1,17 @@
 import { useParams } from "react-router-dom";
-import ItemList from "../components/ItemList";
+import ProductList from "../components/products-components/ProductList";
 
-const DisplayCategoryList = () => {
+const Products = () => {
   const category = useParams().category;
   const capitalizeFirstLetter = s => s.charAt(0).toUpperCase() + s.slice(1);
 
   return (
     <div>
-      <div className="shopTitle">
+      <div className="shop__title">
         <h1>{capitalizeFirstLetter(category)}</h1>
       </div>
-      <ItemList category={category} />
+      <ProductList category={category} />
     </div>
   );
 };
-export default DisplayCategoryList;
+export default Products;

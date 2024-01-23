@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const CategoryBar = () => {
   return (
@@ -8,6 +8,6 @@ const CategoryBar = () => {
       <Link to="/clothing">Clothing</Link>
       <Link to="/shoes">Shoes</Link>
     </div>
-  )
-}
-export default CategoryBar
+  );
+};
+export default CategoryBar;
